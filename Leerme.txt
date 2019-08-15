@@ -86,3 +86,5 @@ con el siguiente comando - git remto add origin  <Url del repsitorio creado> -
 luego con el siguiente comando - git push -u origin <master o rama que quiero guardar> - 
 Se levantara la ventana de login para que te autentique y una vez hecho esto se hara. 
  
+14. Ahora para traernos un directorio o un proyecto con el git lo que debemos hacer es copiar la ruta de nuestro repositorio 
+y luego copiamos el sigiente comando - git clone <y la URL de nuestro repositorio git hub>.
