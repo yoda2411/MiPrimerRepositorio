@@ -1,1 +1,88 @@
 Informacion de como utilizar el git con le terminal.
+
+/********Informacion de Git y GitHub********/
+
+**Gti es OpenSource el mismo creador del Kernel de linux.
+**Version control system for tracking changes in computer files.
+**Coordinates work between multiple developes.
+**Who made what changes and when.
+**Revert back any time.
+**Local & remote repots.
+
+/************************Comandos basicos***************************/
+  Nota: Git instala una especie de terminal un Basch o consola.
+git init= Se le dice a git que voy a crear un proyecto nuevo. Y vas a empezar a usar git
+git add<file>  Es para pasar los archivos del working directory al staging area
+git status --> En que estado estan tus arhivos si estan en working directory o en el staging area
+gti commit ---> es para pasarlo del staging area a el repository. 
+gti push  =Sirve para subirlo a un repositorio remoto.
+git pull-->Para traerme los cambios que han hecho los otros desarrolladores
+git clone--> Raliza una compia del proyecto 
+
+
+/*****************************************************************************/
+    Git tiene tres estados que son:
+    Working directory----> Es donde se trabaja con los archivos
+    staging area   ----->  Es donde se va guardando todos los archivos que voy a guardar.
+    repository---->Este es el repositorio final.
+
+En la terminal que se instala padremos ejecutar comandos Unit
+ls: lista los directorios en la cual estamos.
+pwd: Nos muestra en el directorio en el cual estas.
+por defecto se ubica es en el escritorio.
+
+*****************************************************************************
+*****************************************************************************
+/*Como inicializo un proyecto en git*/
+1. abro el terminal Banch de git me muevo hasta la carpeta del proyecto que quiero inicializar.
+  Nota: con pwd--> me ubico donde estoy actual mente y con cd path me traslado a donde quiero estar.
+
+2. Una vez en la carpeta uso el comando git init ->para inicializar un proyecto git. Una vez inicializado dentro del proyecto
+me debe habar creado una carpeta .git.
+Esta carpeta .git que se crea no deberia ser modificada de hecho se crea como carpeta ocualta.
+Otra cosa cuando le damos al comando git init comenzamo ya a trabajar en el working directory.
+
+3.  Luego debemos ver cuales archivos tenemos eso se realiza con el comando ---> gti status los archivos en rojo 
+son los que no se les esta haciendo un segimiento y con el comando git add <file> es que se puede agrear a nuestro entorno 
+de trabajo de git.
+
+4.  Ahora para crear un primer punto de control de nuestro codigo usamos el comnado --> git  commit, con esto se mostrar 
+cierto mensajes como que desarrollador es quien va hacer los cambios, hay que configurarlo pur suerte git te muestra los comandos como hacerlo. Ejem: git config --global user.email "emaildelUsuario" y el nombre seria
+git config --global user.name "nombre del usuario".
+
+5. Luego cuando esta listo y configurado vuelves a usar el comendo --git status-- y luego al comando -git commit- observaras
+que se abrira un editor  de codigo (el bing ) si escribes y no aparece nada deberas presionar primero la tecla i.
+luego escribes un comentario, una vez escrito el comentario le damos a la tecla scape y dos punto y luego escribimos wq y listo.
+
+6. Para ver todos los commit que hemos creados utilizamos el comando git log.
+
+7. Para ve la diferencia de archivos modificado o un archivo que hemos modificado el comando seria: git diff Index.html con este
+comando se mostrara la diferencia.  Los signos mas (+) muestr lo que yo he agregado y los signos menos (-) lo que he eliminado.
+
+8. Ahora por cada cambio que se realiza en un archivo se debe usar el comando git add <NomrbeArchvio> y con el comando
+git status veremos que archivos fueron modificados en el working directory. Para guardar esos cambios debo hacer un 
+git commit como se explico en los puntos anteriores.
+
+9. Para agregar texto o achivos que queremos ignorar en nuestro proyecto, debo crear un archivo en mi proyecto llamado 
+.gitignore que es donde voy a listar todos los archivos o directorios que quiero que se ignoren en mi proyecto, claro esta que debo agregar a mi proyecto ese archovo gitignore. con todos los comandos visto anteriormente. Nota importante para 
+evitar entrar al editor de codigo cuando hacemos un commit podemos 
+utilizar el comando -git commit -m "y aqui escribimos el comentario", esto nos evita entrar al editor de codigo.
+
+10. Para agregar un nuevo Branch en un proyecto.   lo primero que debemos hacer es hacer commit y guardar todos los cambios en el proyecto al que le queremos hacer el branch, lugo usanmos el comando - git branch - con este comando solo estoy 
+listando los branch que tengo en el proyecto si quiero crear una vesion alternativa del proyecto utilizo el comando  
+- git branch nombreDelaversionAlternativa , luego haciendo git branch de nuevo veremos que nos sale dos ramas la que existia y la que cree.
+
+11. Para canviarme de rama ya que puedo tener varias ramas o versiones alternativas de un proyecto utilizo el comando 
+git checkout nombreDelaRamaAlternativa , y una vez hecho esto  se nos mostrara el cambio del mismo.
+
+12. Cuando yo ejecuto el comando git status en un proyecto y me muestra los cambios que puede tener mi proyecto estos
+cambios pueden ser muchos archivos, para eviar utilizar el comando git add <nombreArchivo> muchas veces puedo utilizar
+el comando git add . (Es decir sutituyo el nombre del archivo por un punto y es todo) este comando agregara automanticamente
+todos los archivo afectados.
+
+13. Ahora para subir los cambios al git hub solo necesitamos es tener una cuanta en git hub y habar creado un repositorio 
+ ya que necestiaremos la url que se crea para subir los archivos desde la terminal git instalada en tu pc. 
+con el siguiente comando - git remto add origin  <Url del repsitorio creado> -
+luego con el siguiente comando - git push -u origin <master o rama que quiero guardar> - 
+Se levantara la ventana de login para que te autentique y una vez hecho esto se hara. 
+ 
