@@ -1,0 +1,1 @@
+Esta es informacion importante para utilizar el git.
