@@ -1,0 +1,1 @@
+Informacion de como utilizar el git con le terminal.
